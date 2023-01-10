@@ -11,7 +11,7 @@ public class CountingCharacters {
 //                "Once you’ve done that, it’s pretty straightforward from there.";
          Scanner input = new Scanner(System.in);
         System.out.println("Enter a phrase: ");
-        String str = input.nextLine().toLowerCase();
+        String str = input.nextLine().toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
 
         HashMap<Character, Integer> charCount = new HashMap<>();
         for(char c: str.toCharArray()){
